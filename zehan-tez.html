@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ذہن تیز</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600&family=Noto+Nastaliq+Urdu&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef1f8;--cd:#fff;--tx:#182042;--mu:#586089;--ac:#2f3fa8;--hi:#e8a317;--ln:#d6dbee;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1430;--cd:#182046;--tx:#e9ecff;--mu:#a5aedb;--ac:#9aa8ff;--hi:#f2b84b;--ln:#2a3466}}
+:root[data-theme="dark"]{--bg:#0e1430;--cd:#182046;--tx:#e9ecff;--mu:#a5aedb;--ac:#9aa8ff;--hi:#f2b84b;--ln:#2a3466}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:18px/1.9 'Noto Naskh Arabic',Tahoma,sans-serif}
+main{max-width:600px;margin:0 auto;padding:14px 16px 32px}
+h1{font:34px/2 'Noto Nastaliq Urdu','Noto Naskh Arabic',serif;color:var(--ac);margin:6px 0 0}
+p{margin:4px 0}
+.m{color:var(--mu);font-size:16px}
+nav{display:flex;gap:8px;overflow-x:auto;padding:10px 0}
+button{font:inherit;color:var(--tx);background:var(--cd);border:1px solid var(--ln);border-radius:10px;padding:2px 14px;white-space:nowrap;cursor:pointer;min-height:44px}
+button.on,button.p{background:var(--ac);border-color:var(--ac);color:var(--bg)}
+button:focus-visible,input:focus-visible{outline:3px solid var(--hi);outline-offset:2px}
+.c{background:var(--cd);border:1px solid var(--ln);border-radius:14px;padding:14px 16px;margin:12px 0}
+.r{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0}
+.st{display:flex;justify-content:space-between}
+#bar{height:6px;border-radius:3px;background:var(--hi);width:100%;transition:width 1s linear;margin:8px 0}
+#q{direction:ltr;text-align:center;font:600 46px/1.4 'Noto Naskh Arabic',sans-serif;color:var(--ac);margin:6px 0}
+input{font:inherit;font-size:26px;width:100%;padding:6px;border:1px solid var(--ln);border-radius:10px;background:var(--bg);color:var(--tx);text-align:center;direction:ltr}
+.ar{font-size:24px;line-height:2.1;color:var(--ac)}
+ul{padding-inline-start:20px;margin:0}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){#bar{transition:none}}
+</style>
+</head>
+<body>
+<main>
+<h1>ذہن تیز</h1>
+<p class="m">روز چند منٹ کی مشق، تیز دماغ</p>
+<nav id="nav"><button class="on" data-t="math">ریاضی</button><button data-t="puz">پہیلیاں</button><button data-t="tips">دماغی مشورے</button><button data-t="isl">قرآن و حدیث</button></nav>
+
+<section id="math">
+<div class="c"><b>عمل</b>
+<div class="r" id="ops"><button class="on" data-o="+">جمع</button><button data-o="-">تفریق</button><button data-o="×">ضرب</button><button data-o="÷">تقسیم</button><button data-o="mix">ملا جلا</button></div>
+<b>سطح</b>
+<div class="r" id="lvs"><button class="on" data-l="e">آسان</button><button data-l="m">درمیانہ</button><button data-l="h">مشکل</button></div></div>
+<div class="c">
+<div class="st"><span>وقت: <b id="tt">60</b></span><span>سکور: <b id="sc">0</b></span><span>بہترین: <b id="best">0</b></span></div>
+<div id="bar"></div>
+<button class="p" id="go" style="width:100%">60 سیکنڈ کا چیلنج شروع کریں</button>
+<div id="play" hidden><div id="q"></div><input id="ans" type="number" inputmode="numeric" placeholder="جواب"><button class="p" id="ok" style="width:100%;margin-top:8px">جانچیں</button></div>
+<p id="fb" aria-live="polite"></p>
+</div>
+</section>
+
+<section id="puz" hidden>
+<div class="c"><p id="pq"></p><p id="pa" class="ar" hidden></p>
+<div class="r"><button id="sh">جواب دیکھیں</button><button class="p" id="nx">اگلی پہیلی</button></div></div>
+</section>
+
+<section id="tips" hidden>
+<div class="c"><ul>
+<li>نیند: روز 7 سے 9 گھنٹے۔ یاد کیا ہوا نیند میں پکا ہوتا ہے۔</li>
+<li>ورزش: روزانہ 30 منٹ تیز چہل قدمی۔</li>
+<li>یاد کرنا: کتاب بند کر کے بغیر دیکھے بتائیں، پھر 1 دن، 3 دن اور 1 ہفتے بعد دہرائیں۔</li>
+<li>توجہ: 25 منٹ ایک ہی کام، پھر 5 منٹ وقفہ، موبائل دور۔</li>
+<li>فیصلہ: بڑے فیصلے سے پہلے فائدے اور نقصان لکھیں۔</li>
+</ul></div>
+</section>
+
+<section id="isl" hidden>
+<div class="c"><p class="ar" lang="ar">وَقُل رَّبِّ زِدْنِي عِلْمًا</p><p>اور کہو: اے میرے رب! میرے علم میں اضافہ فرما۔</p><p class="m">سورۃ طٰہٰ 20:114</p></div>
+<div class="r"><button id="bq">قرآن</button><button id="bh">حدیث</button></div>
+<div id="qr" hidden><div class="r" id="sl"></div><div id="sv"></div><p class="m">سادہ ترجمہ؛ تصدیق کے لیے مستند ترجمہ یا تفسیر دیکھیں۔ اگلی سورتیں ترتیب سے شامل کی جا رہی ہیں۔</p></div>
+<div id="hd" hidden><div class="r" id="bk"></div><div id="hv"></div><p class="m">سادہ مفہوم؛ تصدیق کے لیے مستند کتاب یا عالم سے رجوع کریں۔ مزید احادیث شامل کی جا رہی ہیں۔</p></div>
+</section>
+</main>
+<script>
+const $=i=>document.getElementById(i),rnd=(a,b)=>a+Math.floor(Math.random()*(b-a+1));
+const gs=k=>{try{return localStorage.getItem(k)}catch(e){return null}},ss=(k,v)=>{try{localStorage.setItem(k,v)}catch(e){}};
+let op='+',lv='e',S=0,T=60,I=0,A=0,pi=-1;
+const N={e:10,m:50,h:100},M={e:10,m:12,h:20};
+const P=[
+["اگلا عدد کیا ہوگا؟ 2، 4، 8، 16، ؟","32 — ہر عدد پچھلے سے دگنا ہے۔"],
+["اگلا عدد کیا ہوگا؟ 1، 4، 9، 16، ؟","25 — یہ 1، 2، 3، 4، 5 کے مربع ہیں۔"],
+["اگلا عدد کیا ہوگا؟ 1، 1، 2، 3، 5، 8، ؟","13 — ہر عدد پچھلے دو کا مجموعہ ہے۔"],
+["ٹوکری میں 5 سیب ہیں۔ آپ 3 لے لیں تو آپ کے پاس کتنے سیب ہوں گے؟","3 — جو آپ نے لیے وہی آپ کے پاس ہیں۔"],
+["5 مشینیں 5 منٹ میں 5 چیزیں بناتی ہیں۔ 100 مشینیں 100 چیزیں کتنی دیر میں بنائیں گی؟","5 منٹ — ہر مشین 5 منٹ میں ایک چیز بناتی ہے۔"],
+["دو دن پہلے جمعرات تھا۔ آج کون سا دن ہے؟","ہفتہ — جمعرات کے دو دن بعد ہفتہ آتا ہے۔"],
+["میں روز آتا ہوں مگر کبھی پہنچتا نہیں۔ میں کیا ہوں؟","آنے والا کل۔"]
+];
+const best=()=>{$('best').textContent=gs('b'+op+lv)||0};
+function pick(id,key,fn){$(id).onclick=e=>{const b=e.target.closest('button');if(!b)return;fn(b.dataset[key]);[...$(id).children].forEach(x=>x.classList.toggle('on',x===b));best()}}
+pick('ops','o',v=>op=v);pick('lvs','l',v=>lv=v);
+function nq(){const o=op==='mix'?'+-×÷'[rnd(0,3)]:op,n=N[lv],m=M[lv];let a,b;
+if(o==='+'){a=rnd(1,n);b=rnd(1,n);A=a+b}
+else if(o==='-'){a=rnd(1,n);b=rnd(1,n);if(b>a)[a,b]=[b,a];A=a-b}
+else if(o==='×'){a=rnd(2,m);b=rnd(2,m);A=a*b}
+else{b=rnd(2,m);A=rnd(2,m);a=b*A}
+$('q').textContent=a+' '+o+' '+b+' = ?';$('ans').value=''}
+function chk(){const v=$('ans').value;if(v===''||!I)return;
+if(+v===A){S++;$('sc').textContent=S;$('fb').textContent='درست!'}else $('fb').textContent='غلط۔ صحیح جواب '+A+' تھا۔';
+nq();$('ans').focus()}
+$('ok').onclick=chk;$('ans').onkeydown=e=>{if(e.key==='Enter')chk()};
+function fin(){clearInterval(I);I=0;$('play').hidden=true;$('go').hidden=false;$('go').textContent='دوبارہ کھیلیں';
+const k='b'+op+lv;if(S>(+gs(k)||0))ss(k,S);best();$('fb').textContent='وقت ختم! '+S+' جواب درست ہوئے۔'}
+$('go').onclick=()=>{S=0;T=60;$('sc').textContent=0;$('tt').textContent=60;$('bar').style.width='100%';$('fb').textContent='';
+$('play').hidden=false;$('go').hidden=true;nq();$('ans').focus();clearInterval(I);
+I=setInterval(()=>{T--;$('tt').textContent=T;$('bar').style.width=T/60*100+'%';if(T<=0)fin()},1000)};
+function np(){let n;do n=rnd(0,P.length-1);while(n===pi);pi=n;$('pq').textContent=P[n][0];$('pa').textContent=P[n][1];$('pa').hidden=true}
+$('nx').onclick=np;$('sh').onclick=()=>{$('pa').hidden=false};
+$('nav').onclick=e=>{const b=e.target.closest('button');if(!b)return;
+[...$('nav').children].forEach(x=>x.classList.toggle('on',x===b));
+['math','puz','tips','isl'].forEach(id=>{$(id).hidden=id!==b.dataset.t})};
+const Q=[["سورۃ الفاتحہ",[
+["بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ","شروع اللہ کے نام سے جو بہت مہربان، نہایت رحم والا ہے۔"],
+["الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ","تمام تعریفیں اللہ کے لیے ہیں جو سارے جہانوں کا رب ہے۔"],
+["الرَّحْمَٰنِ الرَّحِيمِ","نہایت مہربان، بہت رحم والا۔"],
+["مَالِكِ يَوْمِ الدِّينِ","جزا کے دن کا مالک۔"],
+["إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ","ہم صرف تیری ہی عبادت کرتے ہیں اور صرف تجھ ہی سے مدد مانگتے ہیں۔"],
+["اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ","ہمیں سیدھے راستے پر چلا۔"],
+["صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ","ان لوگوں کے راستے پر جن پر تو نے انعام کیا؛ ان کے راستے پر نہیں جن پر غضب ہوا اور نہ ان کے جو بھٹک گئے۔"]]],
+["سورۃ البقرہ",[
+["الم","الف، لام، میم۔ (یہ حروفِ مقطعات ہیں؛ ان کا حقیقی مطلب اللہ ہی بہتر جانتا ہے۔)"],
+["ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ هُدًى لِّلْمُتَّقِينَ","یہ وہ کتاب ہے جس میں کوئی شک نہیں؛ ڈرنے والوں (پرہیزگاروں) کے لیے ہدایت ہے۔"],
+["الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ","جو غیب پر ایمان لاتے ہیں، نماز قائم کرتے ہیں اور جو کچھ ہم نے انہیں دیا اس میں سے خرچ کرتے ہیں۔"],
+["وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ","اور جو اس (کتاب) پر ایمان لاتے ہیں جو آپ کی طرف اتاری گئی اور اس پر جو آپ سے پہلے اتاری گئی، اور آخرت پر یقین رکھتے ہیں۔"],
+["أُولَٰئِكَ عَلَىٰ هُدًى مِّن رَّبِّهِمْ وَأُولَٰئِكَ هُمُ الْمُفْلِحُونَ","یہی لوگ اپنے رب کی طرف سے ہدایت پر ہیں اور یہی کامیاب ہونے والے ہیں۔"],
+["إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ","بے شک جنہوں نے کفر کیا، ان کے لیے برابر ہے کہ آپ انہیں ڈرائیں یا نہ ڈرائیں، وہ ایمان نہیں لائیں گے۔"],
+["خَتَمَ اللَّهُ عَلَىٰ قُلُوبِهِمْ وَعَلَىٰ سَمْعِهِمْ وَعَلَىٰ أَبْصَارِهِمْ غِشَاوَةٌ وَلَهُمْ عَذَابٌ عَظِيمٌ","اللہ نے ان کے دلوں اور کانوں پر مہر لگا دی، ان کی آنکھوں پر پردہ ہے، اور ان کے لیے بڑا عذاب ہے۔"],
+["وَمِنَ النَّاسِ مَن يَقُولُ آمَنَّا بِاللَّهِ وَبِالْيَوْمِ الْآخِرِ وَمَا هُم بِمُؤْمِنِينَ","اور لوگوں میں کچھ ایسے ہیں جو کہتے ہیں: ہم اللہ اور آخرت کے دن پر ایمان لائے، حالانکہ وہ ایمان والے نہیں۔"],
+["يُخَادِعُونَ اللَّهَ وَالَّذِينَ آمَنُوا وَمَا يَخْدَعُونَ إِلَّا أَنفُسَهُمْ وَمَا يَشْعُرُونَ","وہ اللہ اور ایمان والوں کو دھوکا دینا چاہتے ہیں، حالانکہ صرف اپنے آپ کو دھوکا دے رہے ہیں اور انہیں شعور نہیں۔"],
+["فِي قُلُوبِهِم مَّرَضٌ فَزَادَهُمُ اللَّهُ مَرَضًا وَلَهُمْ عَذَابٌ أَلِيمٌ بِمَا كَانُوا يَكْذِبُونَ","ان کے دلوں میں بیماری ہے، تو اللہ نے ان کی بیماری اور بڑھا دی، اور ان کے لیے دردناک عذاب ہے کیونکہ وہ جھوٹ بولتے تھے۔"]
+]]];
+const H=[["صحیح بخاری",[
+["کتاب بدء الوحی · حدیث 1","اعمال کا دارومدار نیتوں پر ہے، اور ہر شخص کو وہی ملے گا جس کی اس نے نیت کی۔"],
+["کتاب الایمان · حدیث 10","مسلمان وہ ہے جس کی زبان اور ہاتھ سے دوسرے مسلمان محفوظ رہیں۔"],
+["کتاب الایمان · حدیث 13","تم میں سے کوئی اس وقت تک مومن نہیں ہوتا جب تک اپنے بھائی کے لیے وہی پسند نہ کرے جو اپنے لیے پسند کرتا ہے۔"],
+["کتاب فضائل القرآن · حدیث 5027","تم میں بہترین وہ ہے جو قرآن سیکھے اور سکھائے۔"],
+["کتاب الایمان · حدیث 52","حلال واضح ہے اور حرام بھی واضح ہے، اور ان کے درمیان مشتبہ چیزیں ہیں؛ جو مشتبہ چیزوں سے بچا اس نے اپنا دین اور عزت بچا لی۔"],
+["کتاب الادب · حدیث 6114","طاقتور وہ نہیں جو کشتی میں پچھاڑ دے؛ اصل طاقتور وہ ہے جو غصے کے وقت خود پر قابو رکھے۔"],
+["کتاب الرقاق · حدیث 6412","دو نعمتیں ایسی ہیں جن میں بہت سے لوگ خسارے میں رہتے ہیں: صحت اور فراغت۔"]]],
+["صحیح مسلم",[
+["کتاب الایمان · حدیث 55","دین خیرخواہی کا نام ہے۔"],
+["کتاب القدر · حدیث 2664","طاقتور مومن اللہ کے نزدیک کمزور مومن سے بہتر اور زیادہ محبوب ہے، اور دونوں میں خیر ہے۔"],
+["کتاب الذکر والدعاء · حدیث 2699","جو شخص علم کی تلاش میں کسی راستے پر چلتا ہے، اللہ اس کی وجہ سے اس کے لیے جنت کا راستہ آسان کر دیتا ہے۔"],
+["کتاب الایمان · حدیث 47","جو اللہ اور آخرت کے دن پر ایمان رکھتا ہے، وہ اچھی بات کہے یا خاموش رہے۔"],
+["کتاب الوصیۃ · حدیث 1631","جب انسان مر جاتا ہے تو اس کے عمل ختم ہو جاتے ہیں، سوائے تین کے: صدقۂ جاریہ، ایسا علم جس سے فائدہ اٹھایا جائے، اور نیک اولاد جو اس کے لیے دعا کرے۔"],
+["کتاب الزہد والرقائق · حدیث 2999","مومن کا معاملہ عجیب ہے، اس کا ہر معاملہ اس کے لیے بھلائی ہے: خوشی ملے تو شکر کرتا ہے، تکلیف پہنچے تو صبر کرتا ہے، اور دونوں اس کے لیے بہتر ہیں۔"]]]];
+function card(a,b,c){const d=document.createElement('div');d.className='c';
+if(a){const p=document.createElement('p');p.className='ar';p.lang='ar';p.textContent=a;d.append(p)}
+const t=document.createElement('p');t.textContent=b;d.append(t);
+if(c){const m=document.createElement('p');m.className='m';m.textContent=c;d.append(m)}return d}
+function group(data,bx,vw,mk){$(bx).replaceChildren(...data.map(g=>{const b=document.createElement('button');b.textContent=g[0];
+b.onclick=()=>{[...$(bx).children].forEach(x=>x.classList.toggle('on',x===b));$(vw).replaceChildren(...g[1].map(mk))};return b}));
+$(bx).children[0].click()}
+const tog=(x,y)=>{$('qr').hidden=x;$('hd').hidden=y;$('bq').classList.toggle('on',!x);$('bh').classList.toggle('on',!y)};
+$('bq').onclick=()=>tog(false,true);$('bh').onclick=()=>tog(true,false);
+group(Q,'sl','sv',(v,i)=>card(v[0],v[1],'آیت '+(i+1)));group(H,'bk','hv',v=>card('',v[1],v[0]));
+np();best();
+</script>
+</body>
+</html>
