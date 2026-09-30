@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ایک جدید اور responsive ویب سائٹ">
+  <title>میری ویب سائٹ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home">میری ویب سائٹ</a>
+      <button class="menu-btn" id="menuBtn" aria-label="مینو کھولیں">☰</button>
+      <nav id="navMenu">
+        <a href="#home">ہوم</a>
+        <a href="#about">ہمارے بارے میں</a>
+        <a href="#services">سروسز</a>
+        <a href="#contact">رابطہ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <div>
+          <span class="badge">خوش آمدید</span>
+          <h1>ایک جدید، تیز اور خوبصورت ویب سائٹ</h1>
+          <p>یہ HTML، CSS اور JavaScript سے بنائی گئی responsive ویب سائٹ ہے جو موبائل اور کمپیوٹر دونوں پر چلتی ہے۔</p>
+          <div class="buttons">
+            <a class="btn primary" href="#contact">رابطہ کریں</a>
+            <a class="btn secondary" href="#services">سروسز دیکھیں</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="circle">WEB</div>
+          <h3>100% Responsive</h3>
+          <p>Android، Chrome اور Desktop کے لیے تیار۔</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>ہمارے بارے میں</h2>
+        <p class="section-text">آپ اس حصے میں اپنی کمپنی، کاروبار، پروجیکٹ یا ذاتی تعارف لکھ سکتے ہیں۔ یہ ویب سائٹ آپ کے اپنے نام اور برانڈ کے مطابق تبدیل کی جا سکتی ہے۔</p>
+      </div>
+    </section>
+
+    <section id="services" class="section alt">
+      <div class="container">
+        <h2>ہماری سروسز</h2>
+        <div class="cards">
+          <article class="card"><span>01</span><h3>Web Design</h3><p>جدید اور mobile-friendly ڈیزائن۔</p></article>
+          <article class="card"><span>02</span><h3>Development</h3><p>HTML، CSS اور JavaScript کے ساتھ functional website۔</p></article>
+          <article class="card"><span>03</span><h3>Support</h3><p>ویب سائٹ میں تبدیلی اور مزید features شامل کیے جا سکتے ہیں۔</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container contact">
+        <div>
+          <h2>رابطہ کریں</h2>
+          <p>اپنا پیغام نیچے لکھیں۔ Demo میں یہ form browser کے اندر confirmation دکھائے گا۔</p>
+        </div>
+        <form id="contactForm">
+          <input id="name" type="text" placeholder="آپ کا نام" required>
+          <input id="email" type="email" placeholder="آپ کا ای میل" required>
+          <textarea id="message" rows="5" placeholder="آپ کا پیغام" required></textarea>
+          <button class="btn primary" type="submit">پیغام بھیجیں</button>
+          <p id="formMessage" class="form-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer">
+      <p>© <span id="year"></span> میری ویب سائٹ — تمام حقوق محفوظ ہیں۔</p>
+      <a href="#home">اوپر جائیں ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
